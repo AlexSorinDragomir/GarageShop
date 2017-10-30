@@ -1,0 +1,4 @@
+To start the Sql Server SQLEXPRESS go to Services 
+	- search SQL Server(SQLEXPRESS) start it.
+
+Management Studio name: LOCALHOST\SQLEXPRESS

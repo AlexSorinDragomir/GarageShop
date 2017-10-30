@@ -1,0 +1,36 @@
+namespace
+{
+    using System;
+    using System.Data.Entity;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Linq;
+
+    public partial class Model : DbContext
+    {
+        public Model()
+            : base("name=GarageEntities")
+        {
+        }
+
+        public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<ProductType> ProductTypes { get; set; }
+        public virtual DbSet<Purchase> Purchases { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Product>()
+                .Property(e => e.Price)
+                .HasPrecision(18, 0);
+
+            modelBuilder.Entity<Product>()
+                .Property(e => e.Description)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<ProductType>()
+                .HasMany(e => e.Products)
+                .WithRequired(e => e.ProductType)
+                .HasForeignKey(e => e.TypeID);
+        }
+    }
+}

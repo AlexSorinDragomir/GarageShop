@@ -41,7 +41,7 @@ public partial class Pages_Account_Login : Page
         }
         else
         {
-            //litStatus.Text = "Invalid username or password";
+            litErrorMsg.Visible = true;
         }
     }
 }

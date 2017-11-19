@@ -95,9 +95,8 @@ public class ProductModel
                 return products;
             }
         }
-        catch (Exception)
+        catch (Exception ex)
         {
-
             return null;
         }
     }

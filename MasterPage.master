@@ -20,15 +20,15 @@
             <div class="navbar-inverse navbar-fixed-middle">
               <div class="container">
                   <ul class="nav navbar-nav">
-                    <li class="active"><asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Index.aspx">Webshop</asp:HyperLink></li>
-                    <li><asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Pages/About.aspx">About Us</asp:HyperLink></li>
-                    <li><asp:HyperLink ID="HyperLink7" runat="server">Reports</asp:HyperLink></li>
-                    <li><asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/Pages/Management/Management.aspx">Management</asp:HyperLink></li>
-                    <li style="float: right">
+                    <li runat="server" ID="lnkIndexLi" class="active"><asp:HyperLink ID="lnkIndex" runat="server" NavigateUrl="~/Index.aspx">Webshop</asp:HyperLink></li>
+                    <li runat="server" ID="lnkAboutLi"><asp:HyperLink ID="lnkAbout" runat="server" NavigateUrl="~/Pages/About.aspx">About Us</asp:HyperLink></li>
+                    <li runat="server" ID="lnkFeedbackLi"><asp:HyperLink ID="lnkFeedback" runat="server" NavigateUrl="~/Pages/Feedback.aspx">Feedback</asp:HyperLink></li>
+                    <li runat="server" ID="lnkManagementLi"><asp:HyperLink ID="lnkManagement" runat="server" NavigateUrl="~/Pages/Management/Management.aspx">Management</asp:HyperLink></li>
+                    <li runat="server" ID="lnkRegisterLi" style="float: right">
                             <asp:HyperLink ID="lnkRegister" runat="server" NavigateUrl="~/Pages/Account/Register.aspx">Register</asp:HyperLink>
                             <asp:HyperLink ID="litStatus" runat="server" NavigateUrl="~/Pages/ShoppingCart.aspx"></asp:HyperLink>
                     </li>
-                    <li style="float: right">
+                    <li runat="server" id="lnkLoginLi" style="float: right">
                             <asp:HyperLink ID="LnkLogIn" runat="server" NavigateUrl="~/Pages/Account/Login.aspx">Log in</asp:HyperLink>
                             <asp:LinkButton ID="btnLogOut" runat="server" Text="Log out" OnClick="lnkLogOut_Click" />
                     </li>
@@ -45,7 +45,25 @@
     </div>
     </form>
 
+    <div class="container body-content">
+        <hr />
+        <footer>
+            <p>&copy; 2018 - Garage Shop</p>
+        </footer>
+        <br />
+    </div>
+
     <script src="~/Scripts/jquery-3.2.0.min.js"></script>
+    <%--<script>
+        $(document).ready(function () {
+            console.log('inline script');
+            var url = window.location;
+            $('.nav .navbar-nav').find('.active').removeClass('active');
+            $('.nav .navbar li').each(function () {
+                    $(this).addClass('active');
+            });
+        });
+    </script>--%>
     <script src="~/Scripts/bootstrap.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 

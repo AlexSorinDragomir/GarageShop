@@ -1,9 +1,34 @@
 ﻿using System;
 using System.Linq;
 using Microsoft.AspNet.Identity;
+using System.IO;
+using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Reflection;
+
+//public partial class CarModel
+//{
+//    public string value { get; set; }
+//    public string title { get; set; }
+//}
+
+//public partial class CarItem
+//{
+//    public string value { get; set; }
+//    public string title { get; set; }
+//    public List<CarModel> models { get; set; }
+//}
+
 
 public partial class Pages_Product : System.Web.UI.Page
 {
+
+    //Dictionary<string, string> listOfCars = new Dictionary<string, string>();
+
+    //Dictionary<string, string> carModels = new Dictionary<string, string>();
+
+    //List<CarItem> items = null;
+
     protected void Page_Load(object sender, EventArgs e)
     {
         FillPage();
@@ -41,6 +66,33 @@ public partial class Pages_Product : System.Web.UI.Page
 
     private void FillPage()
     {
+        //if (items == null)
+        //{
+        //    var fileName = "cars.json";
+        //    var baseDir = AppDomain.CurrentDomain.BaseDirectory;
+        //    var path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"Resources\", fileName);
+
+        //    var json = File.ReadAllText(path);
+        //    items = JsonConvert.DeserializeObject<List<CarItem>>(json);
+        //    listOfCars.Clear();
+
+        //    foreach (var item in items)
+        //    {
+        //        listOfCars.Add(item.value, item.title);
+        //    }
+
+        //    if (!IsPostBack)
+        //    {
+        //        CarDropDownList.DataSource = listOfCars;
+        //        CarDropDownList.DataTextField = "Key";
+        //        CarDropDownList.DataValueField = "Value";
+        //        CarDropDownList.DataBind();
+
+        //        var models = items.First().models;
+        //        setCarModeDropDownDataSource(models);
+        //    }
+        //}
+        
         //Get selected product data
         if (!string.IsNullOrWhiteSpace(Request.QueryString["id"]))
         {
@@ -63,4 +115,36 @@ public partial class Pages_Product : System.Web.UI.Page
         }
     }
 
+    //private void setCarModeDropDownDataSource(List<CarModel> models)
+    //{
+    //    carModels.Clear();
+    //    foreach (var model in models)
+    //    {
+    //        carModels.Add(model.value, model.title);
+    //    }
+
+    //    CarModelDropDownList.DataSource = carModels;
+    //    CarModelDropDownList.DataTextField = "Value";
+    //    CarModelDropDownList.DataValueField = "Key";
+    //    CarModelDropDownList.DataBind();
+    //}
+
+    //protected void CarDropDownList_TextChanged(object sender, EventArgs e)
+    //{
+    //    if (IsPostBack)
+    //    {
+    //        string carDropDownListSelectedVal = CarDropDownList.SelectedValue;
+    //        string dropdownText = CarDropDownList.Text;
+    //        foreach (var car in items)
+    //        {
+    //            if (car.title == carDropDownListSelectedVal)
+    //            {
+    //                setCarModeDropDownDataSource(car.models);
+    //                break;
+    //            }
+    //        }
+    //    }
+    //}
+
+   
 }

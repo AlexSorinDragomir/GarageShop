@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <h4>Log In</h4><hr />
-    <asp:Literal runat="server" ID="litErrorMsg" Text="Invalid username or password." Visible="false" /><br />
+    <asp:Literal runat="server" ID="litErrorMsg" Text="<span style='color:red;'>Invalid username or password.</span>" Visible="false" /><br />
     <asp:Label runat="server" AssociatedControlID="txtUserName">User name</asp:Label>
     <br />
     <asp:TextBox runat="server" ID="txtUserName" CssClass="inputs" />

@@ -27,7 +27,7 @@ public partial class Index : System.Web.UI.Page
                 };
                 Label lblPrice = new Label
                 {
-                    Text = "£ " + product.Price,
+                    Text = "From £ " + product.Price,
                     CssClass = "productPrice"
                 };
 

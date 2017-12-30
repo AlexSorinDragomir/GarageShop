@@ -19,6 +19,14 @@
                 <asp:Label ID="lblDescription" runat="server" CssClass="detailsDescription"></asp:Label>
             </td>
             <td >
+                <br />
+                <%--<asp:Label ID="CarDropdownLabel" runat="server" CssClass="detailsPrice">Car</asp:Label><br />
+                <asp:DropDownList ID="CarDropDownList" runat="server" AutoPostBack=True OnTextChanged="CarDropDownList_TextChanged">
+                </asp:DropDownList>
+                <br />
+                <asp:Label ID="CarModelDropdownLabel" runat="server" CssClass="detailsPrice">Model</asp:Label><br />
+                <asp:DropDownList ID="CarModelDropDownList" runat="server"> </asp:DropDownList>
+                <br />--%>
                 <asp:Label ID="lblPrice" runat="server" CssClass="detailsPrice"></asp:Label><br />
                 Quantity:<asp:DropDownList ID="ddlAmount" runat="server"></asp:DropDownList><br />
                 <asp:Button ID="btnAdd" runat="server" CssClass="button" OnClick="btnAdd_Click" Text="Add Product" />

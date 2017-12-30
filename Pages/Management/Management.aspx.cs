@@ -9,7 +9,8 @@ public partial class Pages_Management_Management : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        grdProducts.HeaderRow.TableSection = TableRowSection.TableHeader;
+        grdProductTypes.HeaderRow.TableSection = TableRowSection.TableHeader;
     }
     protected void grdProducts_RowEditing(object sender, GridViewEditEventArgs e)
     {

@@ -103,11 +103,11 @@ public partial class Pages_ShoppingCart : Page
             ddlAmount.SelectedIndexChanged += ddlAmount_SelectedIndexChanged;
 
             //Create table to hold shopping cart details
-            Table table = new Table { CssClass = "CartTable" };
+            Table table = new Table { CssClass = "CartTable", CellPadding = 10, };
             TableRow row1 = new TableRow();
             TableRow row2 = new TableRow();
 
-            TableCell cell1_1 = new TableCell { RowSpan = 2, Width = 50 };
+            TableCell cell1_1 = new TableCell { RowSpan = 2, Width = 400, };
             TableCell cell1_2 = new TableCell { Text = string.Format("<h4>{0}</h4><br />{1}<br/>In Stock",
                 product.Name, "Item No:" + product.Id), HorizontalAlign = HorizontalAlign.Left, Width = 350, };
             TableCell cell1_3 = new TableCell { Text = "Unit Price<hr/>" };

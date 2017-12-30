@@ -11,7 +11,6 @@
         <AssociationConnector Association="GarageDBModel.FK_Cart_Product" ManuallyRouted="false" />
         <AssociationConnector Association="GarageDBModel.FK_Product_ProductTypes" ManuallyRouted="false" />
         <EntityTypeShape EntityType="GarageDBModel.UserDetail" Width="1.5" PointX="0.75" PointY="4.75" />
-        <EntityTypeShape EntityType="GarageDBModel.Feedback" Width="1.5" PointX="0.75" PointY="6.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

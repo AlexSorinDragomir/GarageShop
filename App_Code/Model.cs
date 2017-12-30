@@ -22,6 +22,16 @@ public partial class Cart
     public virtual Product Product { get; set; }
 }
 
+public partial class Feedback
+{
+    public int ID { get; set; }
+    public string Email { get; set; }
+    public int Raiting { get; set; }
+    public string Text { get; set; }
+    public string UserGUID { get; set; }
+    public Nullable<System.DateTime> SubmissionDate { get; set; }
+}
+
 public partial class Product
 {
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]

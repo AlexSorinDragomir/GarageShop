@@ -3,39 +3,26 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <p>
-        Name:</p>
-    <p>
-        <asp:TextBox ID="txtName" placeholder="Name" runat="server"></asp:TextBox>
-    </p>
-    <p>
-        Type:</p>
-    <p>
-        <asp:DropDownList ID="ddlType" runat="server" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="Id">
-        </asp:DropDownList>
+        Name:<br />
+        <asp:TextBox ID="txtName" placeholder="Name" runat="server" CssClass="inputs"></asp:TextBox><br />
+
+        Type:<br />
+        <asp:DropDownList ID="ddlType" runat="server" CssClass="inputs" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="Id"></asp:DropDownList><br />
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:GarageDBConnectionString %>" SelectCommand="SELECT * FROM [ProductTypes] ORDER BY [Name]"></asp:SqlDataSource>
-    </p>
-    <p>
-        Price:</p>
-    <p>
-        <asp:TextBox ID="txtPrice" TextMode="Number" min="1" placeholder="Price $" runat="server"></asp:TextBox>
-    </p>
-    <p>
-        Image:</p>
-    <p>
-        <asp:DropDownList ID="ddlImage" runat="server">
-        </asp:DropDownList>
-    </p>
-    <p>
-        Description:</p>
-    <p>
-        <asp:TextBox ID="txtDescription" placeholder="Description" runat="server" Height="64px" TextMode="MultiLine" Width="233px"></asp:TextBox>
-    </p>
-    <p>
-        <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Submit" />
-    </p>
-    <p>
-        <asp:Label ID="lblResult" runat="server"></asp:Label>
-    </p>
+
+    
+        Price:<br />    
+        <asp:TextBox ID="txtPrice" CssClass="inputs" TextMode="Number" min="1" placeholder="Price $" runat="server"></asp:TextBox><br />
+        
+        Image:<br />    
+        <asp:DropDownList ID="ddlImage" runat="server" CssClass="inputs"></asp:DropDownList><br />
+    
+        Description:<br />    
+        <asp:TextBox ID="txtDescription" CssClass="inputs" placeholder="Description" runat="server" Rows="10" Columns="10" TextMode="MultiLine"></asp:TextBox><br />
+        
+        <asp:Button ID="btnSubmit" CssClass="button" runat="server" OnClick="btnSubmit_Click" Text="Submit" /><br />
+        
+        <asp:Label ID="lblResult" runat="server"></asp:Label><br />
+    
 </asp:Content>
 

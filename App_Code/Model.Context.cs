@@ -27,4 +27,5 @@ public partial class GarageDBEntities : DbContext
     public virtual DbSet<Product> Products { get; set; }
     public virtual DbSet<ProductType> ProductTypes { get; set; }
     public virtual DbSet<UserDetail> UserDetails { get; set; }
+    public virtual DbSet<Feedback> Feedback { get; set; }
 }

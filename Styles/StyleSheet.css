@@ -122,7 +122,7 @@
 
 .detailsPrice {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 18px;
     width: 2000px;
 }
 
@@ -144,4 +144,33 @@
     -webkit-box-shadow: 0 0 25px #CCC;
     -moz-box-shadow: 0 0 25px #ccc;
     box-shadow: 0 0 25px #CCC;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#ContentPlaceHolder1_pnlShoppingCart input {
+    width: 150px;
+    height: 150px;
+}
+
+#ContentPlaceHolder1_pnlShoppingCart td {
+    padding: 10px;
+}
+
+#ContentPlaceHolder1_pnlShoppingCart tbody {
+    border: solid 1px;
+    border-color: deepskyblue;
+}
+
+#ContentPlaceHolder1_pnlShoppingCart table {
+    margin: 0 0 3px 0;
+}
+
+table tbody tr td {
+    padding: 10px;
 }

@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-     <h4>Register a new user</h4>
+    <h4>Register a new user</h4>
     <hr />
     <p>
         <asp:Literal runat="server" ID="litStatusMessage" />

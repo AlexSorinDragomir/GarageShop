@@ -56,17 +56,17 @@ public partial class Pages_Account_Register : Page
                 }
                 else
                 {
-                    litStatusMessage.Text = result.Errors.FirstOrDefault();
+                    litStatusMessage.Text = "<span style='color:red;'>"  + result.Errors.FirstOrDefault() + "</span>";
                 }
             }
             catch (Exception ex)
             {
-                litStatusMessage.Text = ex.ToString();
+                litStatusMessage.Text = "<span style='color:red;'>" + ex.ToString() + "</span>";
             }
         }
         else
         {
-            litStatusMessage.Text = "Passwords must match!";
+            litStatusMessage.Text = "<span style='color:red;'>Passwords must match!</span>";
         }
     }
 }
